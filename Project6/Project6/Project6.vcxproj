@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{532B7515-3878-4588-BEE6-EEB517F3067E}</ProjectGuid>
-    <RootNamespace>Project1</RootNamespace>
+    <ProjectGuid>{8FC73BCC-6C8C-4033-B86D-F471551F365A}</ProjectGuid>
+    <RootNamespace>Project6</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -64,14 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bai1.cpp" />
-    <ClCompile Include="bai2.cpp" />
-    <ClCompile Include="bai3.cpp" />
-    <ClCompile Include="bai5.cpp" />
-    <ClCompile Include="functionExample.cpp" />
-    <ClCompile Include="pointerExample.cpp" />
-    <ClCompile Include="bai4.cpp" />
-    <ClCompile Include="bai6.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
