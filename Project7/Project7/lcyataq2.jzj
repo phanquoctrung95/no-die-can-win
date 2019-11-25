@@ -1,0 +1,238 @@
+﻿#include <iostream>
+using namespace std;
+struct quanLiTau
+{
+	char tenTau[5];
+	float hanhTrinh;
+	float gioBatDau;
+	float gioKetThuc;
+	char diemKetThuc[100];
+	float arrGaTau[16];
+	/*float muongMang;
+	float thapCham;
+	float nhaTrang;
+	float tuyHoa;
+	float dieuTri;
+	float quangNgai;
+	float tamKy;
+	float daNang;
+	float hue;
+	float dongHa;
+	float dongHoi;
+	float vinh;
+	float thanhHoa;
+	float ninhBinh;
+	float namDinh;
+	float phuLy;*/
+};
+void nhapDuLieuTau(quanLiTau arr[], int &n);
+void InThongTin(quanLiTau arr[], char ten2[]);
+void nhapDuLieuTau(quanLiTau arr[], int &n){
+	cout << "So tau can nhap du lieu : ";
+	cin >> n;
+	for (int i = 0; i < n; i++){
+		cout << "\n Nhap thong tin tau so " << i + 1;
+		cout << "\n Ten : ";
+		cin >> arr[i].tenTau;
+		cout << "\n Hanh trinh : ";
+		cin >> arr[i].hanhTrinh;
+		cout << "\n Gio bat dau : ";
+		cin >> arr[i].gioBatDau;
+		cout << "\n Gio ket thuc : ";
+		cin >> arr[i].gioKetThuc;
+		cout << "\n Diem ket thuc : ";
+		fflush(stdin);
+		gets_s(arr[i].diemKetThuc);
+		cout << "\n Gio den ga Muong Mang : ";
+		cin >> arr[i].arrGaTau[0];
+		cout << "\n Gio den ga Thap Cham : ";
+		cin >> arr[i].arrGaTau[1];
+		cout << "\n Gio den ga Nha Trang : ";
+		cin >> arr[i].arrGaTau[2];
+		cout << "\n Gio den ga Tuy Hoa : ";
+		cin >> arr[i].arrGaTau[3];
+		cout << "\n Gio den ga Dieu Tri : ";
+		cin >> arr[i].arrGaTau[4];
+		cout << "\n Gio den ga Quang Ngai : ";
+		cin >> arr[i].arrGaTau[5];
+		cout << "\n Gio den ga Tam Ky : ";
+		cin >> arr[i].arrGaTau[6];
+		cout << "\n Gio den ga Da Nang : ";
+		cin >> arr[i].arrGaTau[7];
+		cout << "\n Gio den ga Hue : ";
+		cin >> arr[i].arrGaTau[8];
+		cout << "\n Gio den ga Dong Ha : ";
+		cin >> arr[i].arrGaTau[9];
+		cout << "\n Gio den ga Dong Hoi : ";
+		cin >> arr[i].arrGaTau[10];
+		cout << "\n Gio den ga Vinh : ";
+		cin >> arr[i].arrGaTau[11];
+		cout << "\n Gio den ga Thanh Hoa : ";
+		cin >> arr[i].arrGaTau[12];
+		cout << "\n Gio den ga Ninh Binh : ";
+		cin >> arr[i].arrGaTau[13];
+		cout << "\n Gio den ga Nam Dinh : ";
+		cin >> arr[i].arrGaTau[14];
+		cout << "\n Gio den ga Phu Ly : ";
+		cin >> arr[i].arrGaTau[15];
+	}
+}
+
+// nhap vao ten tau
+// xuat ra thong tin cua tau
+char *layTenGa(int viTri){
+	switch (viTri){
+	case 0:
+		return "Muong Mang";// tieep
+	case 1:
+		return "Thap Cham";
+	case 2: 
+		return "Nha Trang";
+	case 3:
+		return "Tuy Hoa";
+	case 4:
+		return "Dieu Tri ";
+	case 5:
+		return "Quang Ngai";
+	case 6:
+		return "Tam Ky";
+	case 7:
+		return "Dang Nang";
+	case 8:
+		return "Hue";
+	case 9:
+		return "Dong Ha";
+	case 10:
+		return "Dong Hoi";
+	case 11:
+		return "Vinh";
+	case 12:
+		return "Thanh Hoa";
+	case 13:
+		return "Ninh Binh";
+	case 14:
+		return "Nam Dinh";
+	case 15:
+		return "Phu Ly";
+	}
+	
+}
+//input tenGa , sửa tên biến lại
+// output là gì ?của hàm ni hả um vitri
+// vị trí gì ?
+// của ga tàu trong mảng, tiếp
+int nhapTenGa(char *tenGa){
+
+	if (strcmp(tenGa, "Muong Mang")){
+		return 0;
+	}
+	else if (strcmp(tenGa, "Thap Cham")){
+			return 1;
+	}
+	else if (strcmp(tenGa, "Nha Trang")){
+		return 2;
+	}
+	// tiếp
+	else if (strcmp(tenGa, "Tuy Hoa")){
+		return 3;
+	}
+	else if (strcmp(tenGa, "Dieu Tri")){
+		return 4;
+	}
+	else if (strcmp(tenGa, "Quang Ngai")){
+		return 5;
+	}
+	else if (strcmp(tenGa, "Tam Ky")){
+		return 6;
+	}
+	else if (strcmp(tenGa, "Da Nang")){
+		return 7;
+	}
+	else if (strcmp(tenGa, "Hue")){
+		return 8;
+	}
+	else if (strcmp(tenGa, "Dong Ha")){
+		return 9;
+	}
+	else if (strcmp(tenGa, "Dong Hoi")){
+		return 10;
+	}
+	else if (strcmp(tenGa, "Vinh")){
+		return 11;
+	}
+	else if (strcmp(tenGa, "Thanh Hoa")){
+		return 12;
+	}
+	else if (strcmp(tenGa, "Ninh Binh")){
+		return 13;
+	}
+	else if (strcmp(tenGa, "Nam Dinh")){
+		return 14;
+	}
+	else if (strcmp(tenGa, "Phu Ly")){
+		return 15;
+	}
+
+}
+void InThongTin(quanLiTau arr[], int sizeArr, char ten[]){
+
+	for (int i = 0; i < sizeArr; i++){
+		if (strcmp(arr[i].tenTau, ten) == 0){
+			cout << "\n Tim duoc tau";
+			cout << "\n Ten tau : " << arr[i].tenTau;
+			cout << "\n Gio bat dau : " << arr[i].gioBatDau << endl;
+			for (int j = 0; j < 16; j++){
+				if (arr[i].arrGaTau[j] != 0){ // sao lại k in cái này, bằng không thì in ra là k dừng ga này
+					// tiếp, 3h chiều ni deadline
+					// sửa lại cách hiển thị cho dễ hiểu
+					// thêm tên ga vô chỗ j, chứ j là gì có ai biết đâu
+					// thêm tên
+					// chứ số nhìn vô k hiểu
+					// ok chuwa
+					// ngáo hả
+					// bỏ vô làm gì, biết nào cần dùng thì bỏ vô
+					// còn cái này hàm khai báo ở trên r
+					// chay
+					cout << layTenGa(j) << ": " << arr[i].arrGaTau[j] << "gio\t";
+				}
+			}
+		}
+	}
+	cout << "\n Da ket thuc ham";
+	system("pause");
+}
+//input ten tau, ten ga
+//output in rathong ti
+// có tên tau, tên ga rồi, thao tác nhập ở ngoài
+// hàm này chỉ tìm thông tin rồi in ra thôi
+// giống như InThongTin
+// hiểu k, oke
+void InGioDenTaiGa(quanLiTau arr[],int sizearr,char tenTau[], char tenGa[]){
+	for (int i = 0; i < sizearr; i++){
+		if (strcmp(tenTau, arr[i].tenTau) == 0){
+			for (int j = 0; j < 16; j++){
+				if (nhapTenGa(tenGa) ==j){
+					cout << tenGa << ": " << arr[i].arrGaTau[nhapTenGa(tenGa)];
+				}
+			}
+		}
+	}
+	system("pause");
+}
+int main(){
+	quanLiTau arrTau[100];
+	int size;
+	char tenTau[20];
+	char tenGa[20];
+	nhapDuLieuTau(arrTau, size);
+	//cout << "Nhap vao ten tau can in thong tin : ";
+	//cin >> tenTau;
+	//InThongTin(arrTau, size, tenTau);
+	char *layTenGa();
+	cout << "Nhap vao ten tau : ";
+	cin >> tenTau;
+	cout << "Nhap vao ten ga : ";
+	fflush(stdin);
+	gets_s (tenGa);
+	InGioDenTaiGa(arrTau, size, tenTau, tenGa);
+}
