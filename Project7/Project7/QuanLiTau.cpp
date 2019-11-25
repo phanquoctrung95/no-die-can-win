@@ -324,4 +324,41 @@ int main(){
 	gets_s(tenGa);
 	InGioCacTauDenGa(arrTau, size, tenTau, tenGa);
 	InBang(arrTau, size);
+	//bổ sung menu để chọn hiển thị:
+	/*
+	Moi ban lua chon hien thi:
+	1. Xuat ra gio den  cua tau T tai ga G.
+	2. Xuat ra gio den cac ga cua mot tau T nao do.
+	3. Xuat ra gio cac tau den mot ga G nao do.
+	4. Xuat ra bang thong tin chi tiet cua cac tau.
+	0. Thoat chuong trinh
+	Lua chon cua ban la: ...
+
+	*/
+	int iChoose = 1;
+	while(iChoose>0){
+
+		cout<< "Moi ban lua chon hien thi: ";
+		cout<< "1. Xuat ra gio den  cua tau T tai ga G. ";
+		cout<< "2. Xuat ra gio den cac ga cua mot tau T nao do. ";
+		cout<< "3. Xuat ra gio cac tau den mot ga G nao do. ";
+		cout<< "4. Xuat ra bang thong tin chi tiet cua cac tau. ";
+		cout<< "0. Thoat chuong trinh ";
+		cout<< "Lua chon cua ban la: "; cin >>iChoose;
+		switch (iChoose)
+		{
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 0:
+				break;
+			default:
+				break;
+		}
+	}
 }
