@@ -167,7 +167,6 @@ void InThongTin(quanLiTau arr[], int sizeArr, char ten[]){
 
 	for (int i = 0; i < sizeArr; i++){
 		if (strcmp(arr[i].tenTau, ten) == 0){
-			cout << "\n Tim duoc tau";
 			cout << "\n Ten tau : " << arr[i].tenTau;
 			cout << "\n Gio bat dau : " << arr[i].gioBatDau << endl;
 			for (int j = 0; j < 16; j++){
@@ -310,20 +309,6 @@ int main(){
 	cin >> tenTau;
 	InThongTin(arrTau, size, tenTau);
 	char *layTenGa();
-	cout << "Nhap vao ten tau : ";
-	cin >> tenTau;
-	cout << "Nhap vao ten ga : ";
-	fflush(stdin);
-	gets_s(tenGa);
-	InGioDenTaiGa(arrTau, size, tenTau, tenGa);
-	cout << "Nhap vao ten tau : ";
-	cin >> tenTau;
-	InCacGaTauDen(arrTau, size, tenTau);
-	cout << "Nhap vao ten ga : ";
-	fflush(stdin);
-	gets_s(tenGa);
-	InGioCacTauDenGa(arrTau, size, tenTau, tenGa);
-	InBang(arrTau, size);
 	//bổ sung menu để chọn hiển thị:
 	/*
 	Moi ban lua chon hien thi:
@@ -339,26 +324,35 @@ int main(){
 	while(iChoose>0){
 
 		cout<< "Moi ban lua chon hien thi: ";
-		cout<< "1. Xuat ra gio den  cua tau T tai ga G. ";
-		cout<< "2. Xuat ra gio den cac ga cua mot tau T nao do. ";
-		cout<< "3. Xuat ra gio cac tau den mot ga G nao do. ";
-		cout<< "4. Xuat ra bang thong tin chi tiet cua cac tau. ";
-		cout<< "0. Thoat chuong trinh ";
-		cout<< "Lua chon cua ban la: "; cin >>iChoose;
+		cout<< "\n1. Xuat ra gio den  cua tau T tai ga G. ";
+		cout<< "\n2. Xuat ra gio den cac ga cua mot tau T nao do. ";
+		cout<< "\n3. Xuat ra gio cac tau den mot ga G nao do. ";
+		cout<< "\n4. Xuat ra bang thong tin chi tiet cua cac tau. ";
+		cout<< "\n0. Thoat chuong trinh ";
+		cout<< "\nLua chon cua ban la: "; cin >>iChoose;
 		switch (iChoose)
 		{
-			case 1:
-				break;
-			case 2:
-				break;
-			case 3:
-				break;
-			case 4:
-				break;
-			case 0:
+			case 1:	cout << "Nhap vao ten tau : ";
+					cin >> tenTau;
+					cout << "Nhap vao ten ga : ";
+					fflush(stdin);
+					gets_s(tenGa);
+					InGioDenTaiGa(arrTau, size, tenTau, tenGa);
+					break;
+			case 2:	cout << "Nhap vao ten tau : ";
+					cin >> tenTau;
+					InCacGaTauDen(arrTau, size, tenTau);
+					break;
+			case 3: cout << "Nhap vao ten ga : ";
+					fflush(stdin);
+					gets_s(tenGa);
+					InGioCacTauDenGa(arrTau, size, tenTau, tenGa);
+					break;
+			case 4: InBang(arrTau, size);
 				break;
 			default:
 				break;
 		}
 	}
+	system("cls");
 }
