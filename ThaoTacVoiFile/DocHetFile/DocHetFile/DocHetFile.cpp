@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <iostream>
+using namespace std;
 void DocHetFile1(char* tenFile)
 {
 	FILE* fi = fopen(tenFile, "rt");
@@ -30,7 +31,7 @@ void DocHetFile2(char* tenFile)
 void main()
 {
 	printf("Doc khi khong biet so luong phan tu, doc den het file thi dung:\n");
-	DocHetFile2("input2.txt");
-	DocHetFile2("input3.txt");
+	cout << "output2 :"; DocHetFile2("input2.txt");
+	cout << "output3 :"; DocHetFile2("input3.txt");
 	system("pause");
 }
