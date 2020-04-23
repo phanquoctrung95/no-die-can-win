@@ -154,3 +154,8 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+/QLNhanSu_GUI/QLNhanSu_GUI/nbproject/private/
+/QLNhanSu/QLNhanSu/nbproject/private/
+/QLNhanSu/QLNhanSu_GUI/nbproject/private/
+/QLNhanSu/QLKHOHANG/nbproject/private/
+/QLNhanSu/QLKHOHANG/dist/
